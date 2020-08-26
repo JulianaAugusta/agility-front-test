@@ -1,3 +1,36 @@
-<p>client-register works!</p>
 
-<router-outlet></router-outlet>
+<div class="container-fluid">
+    <div>
+        <h4>Cadastro de Usuário</h4>
+    </div>
+    <div>
+        <form>
+            <div class="form-group">
+              <label for="nomeUser">Nome</label>
+              <input type="text" class="form-control" id="nome" aria-describedby="nome">
+            </div>
+            <div class="form-group">
+              <label for="customerUser">Empresa</label>
+              <input type="text" class="form-control" id="customer">
+            </div>
+            <div class="form-group">
+                <label for="emailUser">Email</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group form-check">
+                <div>
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Ativo</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Inativo</label>
+                </div>
+              
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+          </form>
+    </div>
+</div>
+
+
