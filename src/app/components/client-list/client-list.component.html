@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <h5 class="m-4">Realize aqui a sua busca:</h5>
+  <form class="mt-5">
+    <div class="row d-flex flex-wrap">
+      <div class="col-lg-3 col-md-6">
+        <input type="text" class="form-control" placeholder="Nome">
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <input type="text" class="form-control" placeholder="Cliente">
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <input type="text" class="form-control" placeholder="Email">
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <button type="button" class="btn btn-primary">Buscar</button>
+      </div>
+      <div class="col-lg-2 col-md-6 align-self-end d-flex">
+        <a routerLink="/register" routerLinkActive="active"><button type="button" class="btn btn-primary align-self-end">Cadastrar Cliente</button></a>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="container-fluid mt-5 table-responsive-sm">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Empresa</th>
+        <th scope="col">Email</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let item of objectList.user">
+        <td>{{ item?.name }}</td>
+        <td>{{ item?.customer }}</td>
+        <td>{{ item?.email }}</td>
+        <td>{{ item?.status == 0 ? "Ativo" : "Inativo"}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<router-outlet></router-outlet>
